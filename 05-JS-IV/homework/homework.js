@@ -6,12 +6,11 @@ function crearGato (nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-
   const gato={
     nombre:nombre,
     edad:edad,
     meow: function(){
-      return 'Meow!'
+      return "Meow!";
     }
   }
   return gato;
@@ -35,7 +34,8 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  objeto[metodo]();
+  
+  objeto[metodo] ();
   
   
   
@@ -46,8 +46,10 @@ function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  p=objetoMisterioso.numeroMisterioso * 5;
-  return p;
+  producto=objetoMisterioso.numeroMisterioso * 5;
+
+  return producto;
+  
   
 
 }
@@ -57,10 +59,8 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
-
   delete objeto[unaPropiedad];
-
-  return objeto;
+  return objeto; 
   
 }
 
@@ -68,14 +68,13 @@ function nuevoUsuario (nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-
-  const user = {
+  
+  usuario={
     nombre:nombre,
     email:email,
     password:password
-  } 
-
-  return user;
+  }
+  return usuario;
   
 
 }
@@ -98,6 +97,7 @@ function tienePropiedad (objeto, propiedad) {
   // Tu código:
   if(objeto[propiedad]) return true;
   return false;
+  
 
 }
 
@@ -107,9 +107,7 @@ function verificarPassword (usuario, password) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if(usuario.password===password) return true;
-  
   return false;
-  
   
   
 }
@@ -129,8 +127,7 @@ function agregarAmigo (usuario, nuevoAmigo) {
   // Devuelve el objeto "usuario"
   // Tu código:
   usuario.amigos.push(nuevoAmigo);
-  return usuario;
-  
+  return usuario; 
 
 }
 
@@ -141,9 +138,10 @@ function pasarUsuarioAPremium (usuarios) {
   // Devuelve el array de usuarios
   // Tu código:
   for(let i=0; i<usuarios.length; i++){
-    usuarios[i].esPremium = true;
+    usuarios[i].esPremium=true;
   }
   return usuarios;
+  
   
 
 }
@@ -157,11 +155,13 @@ function sumarLikesDeUsuario (usuario) {
   // Tu código:
   //posts:[{post: likes},{post},{post}]
   //usuario.posts
-  let suma = 0;
+  suma = 0;
   for(let i=0; i<usuario.posts.length; i++){
-    suma = suma+usuario.posts[i].likes;
+    suma = suma + usuario.posts[i].likes; 
+    
   }
   return suma;
+  
 }
 
 function agregarMetodoCalculoDescuento (producto) {
@@ -174,13 +174,13 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-  producto.calcularPrecioDescuento=function(){
-    descuento=producto.precio * producto.porcentajeDeDescuento;
-    producto.calcularPrecioDescuento = producto.precio-descuento;
-    return producto.calcularPrecioDescuento;
-
+  producto.calcularPrecioDescuento = function(){
+    total=producto.precio-(producto.precio*producto.porcentajeDeDescuento);
+    return total;
+    
   }
   return producto;
+  
 
 
 }
