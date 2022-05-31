@@ -5,15 +5,19 @@ function mayuscula(nombre) {
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código: 
   
-  return nombre[0].toUpperCase() + nombre.slice(1);
+  let letra_may = nombre[0].toUpperCase() + nombre.slice(1);
+
+  return letra_may;
   
 }
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
-  
+
   cb();
+  
+  
 
 }
 
@@ -21,8 +25,10 @@ function operacionMatematica(n1, n2, cb) {
   //Vamos a recibir una función que realiza una operación matemática como callback junto con dos números.
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
+
+  cb(n1, n2);
   
-  cb(n1, n2); 
+   
 
 
 }
@@ -32,11 +38,14 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
-  let suma = numeros.reduce(function(a, v){
-    return a+v;
+
+  let suma = numeros.reduce( function(a, e){
+    return a+e
+
   }, 0)
 
-  cb(suma)
+  cb(suma);
+  
   
 
 }
@@ -45,9 +54,12 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:  
-  array.forEach( function(e){
-    return cb(e)
+
+  array.forEach(function(e){
+    return cb(e);
+
   })
+  
 }
 
 function map(array, cb) {
@@ -55,11 +67,12 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-
-  const narray = array.map(function(element){
-    return cb(element);
+  let arra = array.map(function(e){
+    return cb(e);
   })
-  return narray;
+
+  return arra;
+
 
   
 }
@@ -69,10 +82,14 @@ function filter(array) {
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
 
-  let a = array.filter(function (e){
-    return e[0]==='a';
+  let a = array.filter(function(e){
+    if(e[0]==='a') 
+    return e;
   })
+
   return a;
+  
+  
 }
 
 // No modificar nada debajo de esta línea
