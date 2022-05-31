@@ -7,11 +7,28 @@ img{
 .thirdDiv{
     height: 600px;
     width: 500px;
-    background-color: rgb(179, 175, 182);
+    background-color: rgb(140, 13, 238);
     padding: 50px;
     border: 10px rgb(132, 132, 243) inset;
+    /* display: inline-block; */
+
 }
 #spanId{
     font-size: 18px;
     margin: 50px;
+}
+body{
+    
+    background-image: url("https://img.freepik.com/foto-gratis/textura-tela-blanca_1154-645.jpg?w=2000");
+    text-align: center;
+    
+}
+ul{
+    align-content: center;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
