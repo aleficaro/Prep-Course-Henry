@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+}
+#content{
+    display: flex;
+    padding-top: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5px;
+    height: auto;    
+
+}
+#caja{
+    background-color: rgb(215, 216, 216);
+    box-shadow: 2px 2px 2px -10px;
+    border-right: 2px rgb(105, 150, 105) solid;
+    text-align: center;
+    padding-bottom: 5px;
+    flex: 3;
+    
+}
+#caja1{
+    background-color: rgb(215, 216, 216);
+    border-right: 2px rgb(105, 150, 105) solid;
+    text-align: center;
+    flex: 9;
+    
+}
+#dos{
+    background-color: rgb(105, 150, 105);
+    border-radius: 20px;    
+    display: inline-block;
+    width: 80%;   
+    font-weight: 700; 
+    font-size: large;
+}
+#img{
+    border-radius: 50%;    
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    
+}
+#foto{
+    text-align: center;
+}
+
+#inf_per{
+    text-align: justify;
+    padding: 5%;
+    height: auto;
+    justify-content: space-around;
+}
+
+#titulos{
+    
+    background-color: rgb(105, 150, 105);
+    border-radius: 20px;    
+    display: inline-block;
+    width: 90%;   
+    font-weight: 700; 
+    font-size: large;
+    text-align: start;
+    padding-left: 2%;
+    padding: 1%;
+}
+
+
+table{
+    border: 0px green solid;
+    border-top-left-radius: 5px;
+    padding: 7px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 10px;
+    width: 100%;
+
+}
+
+tr{
+    text-align: left;
+    font-weight: 1000;
+    border: 100px;
+    padding: 50px;
+}
+th{
+    text-align: center;
+}
+
+ #educacion{
+    display: inline-block;
+    width: 90%;  
+    text-align: start;
+    padding-left: 2%;
+    padding: 1%;
+}
